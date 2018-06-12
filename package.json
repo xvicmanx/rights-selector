@@ -1,6 +1,6 @@
 {
   "name": "rights-selector",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A Simple component to select rights",
   "main": "build/RightsSelector/index.js",
   "scripts": {
