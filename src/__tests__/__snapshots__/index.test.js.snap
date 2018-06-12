@@ -66,6 +66,7 @@ exports[`RightsSelector Component renders correctly 1`] = `
         className="rights-selector__cell"
       >
         <input
+          checked={undefined}
           className="rights-selector__input"
           onClick={[Function]}
           type="checkbox"
@@ -76,6 +77,7 @@ exports[`RightsSelector Component renders correctly 1`] = `
         className="rights-selector__cell"
       >
         <input
+          checked={undefined}
           className="rights-selector__input"
           onClick={[Function]}
           type="checkbox"
@@ -86,6 +88,7 @@ exports[`RightsSelector Component renders correctly 1`] = `
         className="rights-selector__cell"
       >
         <input
+          checked={undefined}
           className="rights-selector__input"
           onClick={[Function]}
           type="checkbox"
@@ -96,6 +99,7 @@ exports[`RightsSelector Component renders correctly 1`] = `
         className="rights-selector__cell"
       >
         <input
+          checked={undefined}
           className="rights-selector__input"
           onClick={[Function]}
           type="checkbox"
@@ -115,6 +119,7 @@ exports[`RightsSelector Component renders correctly 1`] = `
         className="rights-selector__cell"
       >
         <input
+          checked={undefined}
           className="rights-selector__input"
           onClick={[Function]}
           type="checkbox"
@@ -125,6 +130,7 @@ exports[`RightsSelector Component renders correctly 1`] = `
         className="rights-selector__cell"
       >
         <input
+          checked={undefined}
           className="rights-selector__input"
           onClick={[Function]}
           type="checkbox"
@@ -135,6 +141,7 @@ exports[`RightsSelector Component renders correctly 1`] = `
         className="rights-selector__cell"
       >
         <input
+          checked={undefined}
           className="rights-selector__input"
           onClick={[Function]}
           type="checkbox"
@@ -145,6 +152,7 @@ exports[`RightsSelector Component renders correctly 1`] = `
         className="rights-selector__cell"
       >
         <input
+          checked={undefined}
           className="rights-selector__input"
           onClick={[Function]}
           type="checkbox"

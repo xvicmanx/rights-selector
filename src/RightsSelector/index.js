@@ -57,6 +57,7 @@ class RightsSelector extends React.Component {
           actions={actions}
           resources={resources}
           onClick={this.handleClick}
+          rights={this.state.rights}
         />
       </Container>
     );

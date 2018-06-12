@@ -40,13 +40,18 @@ var Body = function Body(props) {
             _react2.default.createElement(_wrappers2.default.Input, {
               onClick: props.onClick,
               type: 'checkbox',
-              value: action.value + '::' + resource.value
+              value: action.value + '::' + resource.value,
+              checked: props.rights && props.rights[resource.value] && props.rights[resource.value][action.value]
             })
           );
         })
       );
     })
   );
+};
+
+Body.defaultProps = {
+  rights: {}
 };
 
 Body.propTypes = {
@@ -58,7 +63,8 @@ Body.propTypes = {
     label: _propTypes2.default.string,
     value: _propTypes2.default.any
   })).isRequired,
-  onClick: _propTypes2.default.func.isRequired
+  onClick: _propTypes2.default.func.isRequired,
+  rights: _propTypes2.default.instanceOf(Object)
 };
 
 exports.default = Body;

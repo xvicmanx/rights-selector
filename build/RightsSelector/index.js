@@ -99,7 +99,8 @@ var RightsSelector = function (_React$Component) {
         _react2.default.createElement(_Body2.default, {
           actions: actions,
           resources: resources,
-          onClick: this.handleClick
+          onClick: this.handleClick,
+          rights: this.state.rights
         })
       );
     }

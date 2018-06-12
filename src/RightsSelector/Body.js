@@ -17,6 +17,11 @@ const Body = props => (
               onClick={props.onClick}
               type="checkbox"
               value={`${action.value}::${resource.value}`}
+              checked={
+                props.rights &&
+                props.rights[resource.value] && 
+                props.rights[resource.value][action.value]
+              }
             />
           </Container.Cell>
         ))}
@@ -24,6 +29,10 @@ const Body = props => (
     ))}
   </Container.Body>
 );
+
+Body.defaultProps = {
+  rights: {},
+};
 
 Body.propTypes = {
   actions: PropTypes.arrayOf(
@@ -39,6 +48,7 @@ Body.propTypes = {
     })
   ).isRequired,
   onClick: PropTypes.func.isRequired,
+  rights: PropTypes.instanceOf(Object),
 };
 
 
