@@ -15,6 +15,13 @@ class RightsSelector extends React.Component {
     this.handleClick = this.handleClick.bind(this);
   }
 
+  componentWillReceiveProps(nextProps) {
+    if (nextProps.rights) {
+      this.setState({ rights: nextProps.rights });
+    } 
+  }
+  
+
   handleClick(evt) {
     const { value } = evt.target;
     const { rights } = this.state;

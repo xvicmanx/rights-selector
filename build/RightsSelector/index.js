@@ -54,6 +54,13 @@ var RightsSelector = function (_React$Component) {
   }
 
   _createClass(RightsSelector, [{
+    key: 'componentWillReceiveProps',
+    value: function componentWillReceiveProps(nextProps) {
+      if (nextProps.rights) {
+        this.setState({ rights: nextProps.rights });
+      }
+    }
+  }, {
     key: 'handleClick',
     value: function handleClick(evt) {
       var value = evt.target.value;
