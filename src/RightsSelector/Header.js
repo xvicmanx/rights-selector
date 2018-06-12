@@ -1,17 +1,29 @@
 import React from "react";
 import PropTypes from 'prop-types';
+import Container from './wrappers';
 
 const Header = props => (
-  <thead>
-    <tr>
-      <th />
-      <th colSpan={props.actions.length}>{props.actionsLabel}</th>
-    </tr>
-    <tr>
-      <th>{props.resourcesLabel}</th>
-      {props.actions.map(action => <th key={action.value}>{action.label}</th>)}
-    </tr>
-  </thead>
+  <Container.Header>
+    <Container.Row>
+      <Container.HeaderCell />
+      <Container.HeaderCell colSpan={props.actions.length}>
+        {props.actionsLabel}
+      </Container.HeaderCell>
+    </Container.Row>
+    <Container.Row>
+      <Container.HeaderCell>
+        {props.resourcesLabel}
+      </Container.HeaderCell>
+      {props.actions.map(action => (
+        <Container.HeaderCell
+          key={action.value}
+          modifiers="action"
+        >
+          {action.label}
+        </Container.HeaderCell>
+      ))}
+    </Container.Row>
+  </Container.Header>
 );
 
 Header.propTypes = {

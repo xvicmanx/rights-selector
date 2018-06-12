@@ -24,6 +24,10 @@ var _Body = require('./Body');
 
 var _Body2 = _interopRequireDefault(_Body);
 
+var _wrappers = require('./wrappers');
+
+var _wrappers2 = _interopRequireDefault(_wrappers);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -70,11 +74,16 @@ var RightsSelector = function (_React$Component) {
           actions = _props.actions,
           resources = _props.resources,
           actionsLabel = _props.actionsLabel,
-          resourcesLabel = _props.resourcesLabel;
+          resourcesLabel = _props.resourcesLabel,
+          className = _props.className,
+          style = _props.style;
 
       return _react2.default.createElement(
-        'table',
-        null,
+        _wrappers2.default,
+        {
+          className: className,
+          style: style
+        },
         _react2.default.createElement(_Header2.default, {
           actions: actions,
           resourcesLabel: resourcesLabel,
@@ -92,6 +101,11 @@ var RightsSelector = function (_React$Component) {
   return RightsSelector;
 }(_react2.default.Component);
 
+RightsSelector.defaultProps = {
+  className: '',
+  style: {}
+};
+
 RightsSelector.propTypes = {
   actions: _propTypes2.default.arrayOf(_propTypes2.default.shape({
     label: _propTypes2.default.string,
@@ -103,7 +117,9 @@ RightsSelector.propTypes = {
   })).isRequired,
   onChange: _propTypes2.default.func.isRequired,
   actionsLabel: _propTypes2.default.string.isRequired,
-  resourcesLabel: _propTypes2.default.string.isRequired
+  resourcesLabel: _propTypes2.default.string.isRequired,
+  className: _propTypes2.default.string,
+  style: _propTypes2.default.instanceOf(Object)
 };
 
 exports.default = RightsSelector;

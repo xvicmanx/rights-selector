@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Header from './Header';
 import Body from './Body';
+import Container from './wrappers';
 
 const RIGHT_REGEX = /(.+)::(.+)/;
 
@@ -32,9 +33,14 @@ class RightsSelector extends React.Component {
       resources,
       actionsLabel,
       resourcesLabel,
+      className,
+      style
     } = this.props;
     return (
-      <table>
+      <Container
+        className={className}
+        style={style}
+      >
         <Header
           actions={actions}
           resourcesLabel={resourcesLabel}
@@ -45,10 +51,15 @@ class RightsSelector extends React.Component {
           resources={resources}
           onClick={this.handleClick}
         />
-      </table>
+      </Container>
     );
   }
 }
+
+RightsSelector.defaultProps = {
+  className: '',
+  style: {},
+};
 
 RightsSelector.propTypes = {
   actions: PropTypes.arrayOf(
@@ -66,6 +77,8 @@ RightsSelector.propTypes = {
   onChange: PropTypes.func.isRequired,
   actionsLabel: PropTypes.string.isRequired,
   resourcesLabel: PropTypes.string.isRequired,
+  className: PropTypes.string,
+  style: PropTypes.instanceOf(Object),
 };
 
 export default RightsSelector;

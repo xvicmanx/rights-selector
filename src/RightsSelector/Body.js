@@ -1,23 +1,28 @@
 import React from "react";
 import PropTypes from 'prop-types';
+import Container from './wrappers';
 
 const Body = props => (
-  <tbody>
+  <Container.Body>
     {props.resources.map(resource => (
-      <tr key={`${resource.value}`}>
-        <th>{resource.label}</th>
+      <Container.Row key={`${resource.value}`}>
+        <Container.HeaderCell
+          modifiers="resource"
+        >
+          {resource.label}
+        </Container.HeaderCell>
         {props.actions.map(action => (
-          <td key={`${action.value}::${resource.value}`}>
-            <input
+          <Container.Cell key={`${action.value}::${resource.value}`}>
+            <Container.Input
               onClick={props.onClick}
               type="checkbox"
               value={`${action.value}::${resource.value}`}
             />
-          </td>
+          </Container.Cell>
         ))}
-      </tr>
+      </Container.Row>
     ))}
-  </tbody>
+  </Container.Body>
 );
 
 Body.propTypes = {

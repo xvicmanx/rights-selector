@@ -1,40 +1,46 @@
-"use strict";
+'use strict';
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _react = require("react");
+var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
-var _propTypes = require("prop-types");
+var _propTypes = require('prop-types');
 
 var _propTypes2 = _interopRequireDefault(_propTypes);
+
+var _wrappers = require('./wrappers');
+
+var _wrappers2 = _interopRequireDefault(_wrappers);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var Body = function Body(props) {
   return _react2.default.createElement(
-    "tbody",
+    _wrappers2.default.Body,
     null,
     props.resources.map(function (resource) {
       return _react2.default.createElement(
-        "tr",
-        { key: "" + resource.value },
+        _wrappers2.default.Row,
+        { key: '' + resource.value },
         _react2.default.createElement(
-          "th",
-          null,
+          _wrappers2.default.HeaderCell,
+          {
+            modifiers: 'resource'
+          },
           resource.label
         ),
         props.actions.map(function (action) {
           return _react2.default.createElement(
-            "td",
-            { key: action.value + "::" + resource.value },
-            _react2.default.createElement("input", {
+            _wrappers2.default.Cell,
+            { key: action.value + '::' + resource.value },
+            _react2.default.createElement(_wrappers2.default.Input, {
               onClick: props.onClick,
-              type: "checkbox",
-              value: action.value + "::" + resource.value
+              type: 'checkbox',
+              value: action.value + '::' + resource.value
             })
           );
         })

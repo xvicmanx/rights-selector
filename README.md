@@ -77,6 +77,11 @@ List of resources.
 #### `actions`: array
 List of actions.
 
+#### `className`: string
+Component's class
+
+#### `style`: object
+Component's style
 
 ## Comments
 Feel free to make any suggestion to improve this component.

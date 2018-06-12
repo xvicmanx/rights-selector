@@ -1,6 +1,6 @@
 {
   "name": "rights-selector",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A Simple component to select rights",
   "main": "build/RightsSelector/index.js",
   "scripts": {
@@ -29,6 +29,7 @@
   "author": "Victor Trejo",
   "license": "ISC",
   "dependencies": {
+    "bem-react-component-creator": "^1.2.0",
     "prop-types": "^15.6.0",
     "react": "^16.2.0"
   },

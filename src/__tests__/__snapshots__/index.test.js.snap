@@ -1,95 +1,151 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`RightsSelector Component renders correctly 1`] = `
-<table>
-  <thead>
-    <tr>
-      <th />
+<table
+  className="rights-selector"
+  style={Object {}}
+>
+  <thead
+    className="rights-selector__header"
+  >
+    <tr
+      className="rights-selector__row"
+    >
       <th
+        className="rights-selector__header-cell"
+      />
+      <th
+        className="rights-selector__header-cell"
         colSpan={4}
       >
         Actions
       </th>
     </tr>
-    <tr>
-      <th>
+    <tr
+      className="rights-selector__row"
+    >
+      <th
+        className="rights-selector__header-cell"
+      >
         Resources
       </th>
-      <th>
+      <th
+        className="rights-selector__header-cell rights-selector__header-cell--action"
+      >
         Create
       </th>
-      <th>
+      <th
+        className="rights-selector__header-cell rights-selector__header-cell--action"
+      >
         Read
       </th>
-      <th>
+      <th
+        className="rights-selector__header-cell rights-selector__header-cell--action"
+      >
         Update
       </th>
-      <th>
+      <th
+        className="rights-selector__header-cell rights-selector__header-cell--action"
+      >
         Delete
       </th>
     </tr>
   </thead>
-  <tbody>
-    <tr>
-      <th>
+  <tbody
+    className="rights-selector__body"
+  >
+    <tr
+      className="rights-selector__row"
+    >
+      <th
+        className="rights-selector__header-cell rights-selector__header-cell--resource"
+      >
         Book
       </th>
-      <td>
+      <td
+        className="rights-selector__cell"
+      >
         <input
+          className="rights-selector__input"
           onClick={[Function]}
           type="checkbox"
           value="create::book"
         />
       </td>
-      <td>
+      <td
+        className="rights-selector__cell"
+      >
         <input
+          className="rights-selector__input"
           onClick={[Function]}
           type="checkbox"
           value="read::book"
         />
       </td>
-      <td>
+      <td
+        className="rights-selector__cell"
+      >
         <input
+          className="rights-selector__input"
           onClick={[Function]}
           type="checkbox"
           value="update::book"
         />
       </td>
-      <td>
+      <td
+        className="rights-selector__cell"
+      >
         <input
+          className="rights-selector__input"
           onClick={[Function]}
           type="checkbox"
           value="delete::book"
         />
       </td>
     </tr>
-    <tr>
-      <th>
+    <tr
+      className="rights-selector__row"
+    >
+      <th
+        className="rights-selector__header-cell rights-selector__header-cell--resource"
+      >
         Author
       </th>
-      <td>
+      <td
+        className="rights-selector__cell"
+      >
         <input
+          className="rights-selector__input"
           onClick={[Function]}
           type="checkbox"
           value="create::author"
         />
       </td>
-      <td>
+      <td
+        className="rights-selector__cell"
+      >
         <input
+          className="rights-selector__input"
           onClick={[Function]}
           type="checkbox"
           value="read::author"
         />
       </td>
-      <td>
+      <td
+        className="rights-selector__cell"
+      >
         <input
+          className="rights-selector__input"
           onClick={[Function]}
           type="checkbox"
           value="update::author"
         />
       </td>
-      <td>
+      <td
+        className="rights-selector__cell"
+      >
         <input
+          className="rights-selector__input"
           onClick={[Function]}
           type="checkbox"
           value="delete::author"
