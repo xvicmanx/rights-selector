@@ -77,7 +77,7 @@ List of resources.
 List of actions.
 
 #### `rights`: object
-Rights values
+Initial rights values. This is an object whose keys are the resources values and the values are objects whose keys are actions values with boolean value.
 
 #### `className`: string
 Component's class
